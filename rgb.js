@@ -7,6 +7,8 @@
     let redSlider = document.querySelector('#red');
     let greenSlider = document.querySelector('#green');
     let blueSlider = document.querySelector('#blue');
+    let on13 = document.querySelector('on13');
+    let off13 = document.querySelector('off13');
     let port;
 
     function connect() {
@@ -42,6 +44,20 @@
     greenSlider.addEventListener('input', onUpdate);
     blueSlider.addEventListener('input', onUpdate);
 
+    on13.addEventListener('click', function() {
+      if (!port) {
+        return;
+      }
+      
+    });  
+    
+     off13.addEventListener('click', function() {
+      if (!port) {
+        return;
+      }
+       
+    });  
+    
     connectButton.addEventListener('click', function() {
       if (port) {
         port.disconnect();
