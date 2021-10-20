@@ -48,14 +48,18 @@
       if (!port) {
         return;
       }
-      
+      let view1 = new Uint8Array(0);
+      view1[0] = parseInt(on13.value);
+      port.send(view1);
     });  
     
      off13.addEventListener('click', function() {
       if (!port) {
         return;
       }
-       
+      let view1 = new Uint8Array(0);
+      view1[0] = parseInt(off13.value);
+      port.send(view1); 
     });  
     
     connectButton.addEventListener('click', function() {
